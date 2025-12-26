@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://dcd34g5842hoy"]
+[gd_scene load_steps=3 format=3 uid="uid://dcd34g5842hoy"]
+
+[ext_resource type="Texture2D" uid="uid://w1wy04vlofhx" path="res://Sprite/Sprite-00101.png" id="1_wtcfe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(32, 15)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+physics_interpolation_mode = 1
+mass = 5.195
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(16, 15.5)
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D/CollisionShape2D"]
+position = Vector2(0, 0.5)
+texture = ExtResource("1_wtcfe")
