@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://ceo72ccm8b2so" path="res://Sprite/Ebjik.png" id="2_ft8w5"]
 
 [node name="Player" type="CharacterBody2D"]
-rotation = 0.17453292
 script = ExtResource("1_ft8w5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
