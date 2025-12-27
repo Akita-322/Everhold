@@ -1,21 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5u7xbowg32us"]
+[gd_scene load_steps=3 format=3 uid="uid://c5u7xbowg32us"]
 
 [ext_resource type="Script" uid="uid://c5607yut6acfb" path="res://Scenes/Player/player.gd" id="1_ft8w5"]
 [ext_resource type="Texture2D" uid="uid://ceo72ccm8b2so" path="res://Sprite/Ebjik.png" id="2_ft8w5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ude3g"]
-size = Vector2(30, 12)
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ft8w5")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_ude3g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 3
 texture = ExtResource("2_ft8w5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(11, 0, 14, 0, 14, -1, 15, -1, 15, -6, -15, -6, -15, -1, -14, -1, -14, 0, -7, 0, -7, 2, -6, 2, -6, 4, -5, 4, -5, 5, -4, 5, -4, 6, 4, 6, 4, 5, 5, 5, 5, 4, 6, 4, 6, 2, 7, 2, 7, 0)
