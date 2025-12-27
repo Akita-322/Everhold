@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w1wy04vlofhx"
-path="res://.godot/imported/Sprite-00101.png-0721859ad09c3ce9f2bc9e24c79a99ec.ctex"
+uid="uid://bgk47ug553rap"
+path="res://.godot/imported/Bricks.png-daaf018bec08dc2a2c7871bc3110d6a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Sprite-00101.png"
-dest_files=["res://.godot/imported/Sprite-00101.png-0721859ad09c3ce9f2bc9e24c79a99ec.ctex"]
+source_file="res://Sprite/Bricks.png"
+dest_files=["res://.godot/imported/Bricks.png-daaf018bec08dc2a2c7871bc3110d6a6.ctex"]
 
 [params]
 

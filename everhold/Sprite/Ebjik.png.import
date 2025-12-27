@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bscftowl6ifc1"
-path="res://.godot/imported/Sprite-0003.png-05a57dbf78a64370148edd8a722b02d7.ctex"
+uid="uid://ceo72ccm8b2so"
+path="res://.godot/imported/Ebjik.png-683d5567fcf5f40b881d34799788daeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Sprite-0003.png"
-dest_files=["res://.godot/imported/Sprite-0003.png-05a57dbf78a64370148edd8a722b02d7.ctex"]
+source_file="res://Sprite/Ebjik.png"
+dest_files=["res://.godot/imported/Ebjik.png-683d5567fcf5f40b881d34799788daeb.ctex"]
 
 [params]
 
