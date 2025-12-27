@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+const ROTATION_SPEED = 10
 
 
 func _physics_process(delta: float) -> void:
@@ -19,7 +20,9 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
+		rotation = direction * ROTATION_SPEED * delta
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		rotation = 0
 
 	move_and_slide()
