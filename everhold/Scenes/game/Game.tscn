@@ -1,24 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://dr8e80l3t3flh"]
 
 [ext_resource type="PackedScene" uid="uid://c5u7xbowg32us" path="res://Scenes/Player/Player.tscn" id="1_gv8gk"]
-[ext_resource type="PackedScene" uid="uid://daloluo7ovdi1" path="res://Scenes/WALLS/wall.tscn" id="2_6coir"]
+[ext_resource type="PackedScene" uid="uid://bqgcshm5vk587" path="res://Scenes/Map/map.tscn" id="2_6coir"]
 
 [node name="game" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_gv8gk")]
 position = Vector2(409, 271)
 
-[node name="WALL" parent="." instance=ExtResource("2_6coir")]
-
-[node name="WALL3" parent="." instance=ExtResource("2_6coir")]
-position = Vector2(-6, 0)
-rotation = -1.5707964
-scale = Vector2(0.6820688, 1.4972593)
-
-[node name="WALL5" parent="." instance=ExtResource("2_6coir")]
-position = Vector2(-6, 538)
-rotation = -1.5707964
-scale = Vector2(1, 1.5199987)
-
-[node name="WALL4" parent="." instance=ExtResource("2_6coir")]
-position = Vector2(958, -4)
+[node name="Map" parent="." instance=ExtResource("2_6coir")]
