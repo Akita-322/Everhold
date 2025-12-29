@@ -15,6 +15,10 @@ run/main_scene="uid://dr8e80l3t3flh"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MapManager="*res://Scripts/MapManager.gd"
+
 [display]
 
 window/size/viewport_width=960
