@@ -3,7 +3,7 @@ extends Node
 const MAP_DIR := "res://Data/Map/"
 
 # Сохраняем карту по имени
-func save_map(name: String, tilemap: TileMapLayer) -> bool:
+func save_map(_name: String, tilemap: TileMapLayer) -> bool:
 	DirAccess.make_dir_recursive_absolute(MAP_DIR)
 	var data = { "map": [] }
 
@@ -14,7 +14,7 @@ func save_map(name: String, tilemap: TileMapLayer) -> bool:
 			"type_block": { "atlas": [atlas.x, atlas.y] }
 		})
 	
-	var path = MAP_DIR + name + ".json"
+	var path = MAP_DIR + _name + ".json"
 	var file = FileAccess.open(path, FileAccess.WRITE)
 	if not file:
 		return false
@@ -24,8 +24,8 @@ func save_map(name: String, tilemap: TileMapLayer) -> bool:
 	return true
 	
 # Загружаем карту по имени
-func load_map(name: String, tilemap: TileMapLayer) -> bool:
-	var path = MAP_DIR + name + ".json"
+func load_map(_name: String, tilemap: TileMapLayer) -> bool:
+	var path = MAP_DIR + _name + ".json"
 	if not FileAccess.file_exists(path):
 		return false
 

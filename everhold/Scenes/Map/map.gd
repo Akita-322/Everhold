@@ -9,8 +9,11 @@ const MAP = "Map"
 
 func _ready() -> void:
 	MapManager.load_map(MAP, TILEMAP)
+	var playerSignal = get_node("../Player")
+	playerSignal.block_place.connect(on_block_place)
+	playerSignal.block_remove.connect(on_block_remove)
 
-func _input(event: InputEvent) -> void:
+func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_create_object"):
 		var mouse_position = get_global_mouse_position()
 		var tile_spawn = TILEMAP.local_to_map(mouse_position)
@@ -27,3 +30,11 @@ func _input(event: InputEvent) -> void:
 		MapManager.save_map(MAP, TILEMAP)
 	if Input.is_action_just_pressed("ui_JSON_test_2"):
 		MapManager.load_map(MAP, TILEMAP)
+
+func on_block_place(world_pos, atlas):
+	var block_spawn = TILEMAP.local_to_map(world_pos)
+	TILEMAP.set_cell(block_spawn, ground_level, Brick_Block)
+	
+func on_block_remove(world_pos):
+	var block_spawn = TILEMAP.local_to_map(world_pos)
+	TILEMAP.set_cell(world_pos, ground_level, Vector2i(-1, -1))
