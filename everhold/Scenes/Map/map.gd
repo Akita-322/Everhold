@@ -14,18 +14,18 @@ func _ready() -> void:
 	playerSignal.block_remove.connect(on_block_remove)
 
 func _input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_create_object"):
-		var mouse_position = get_global_mouse_position()
-		var tile_spawn = TILEMAP.local_to_map(mouse_position)
-		print(tile_spawn)
-		TILEMAP.set_cell(tile_spawn, ground_level, Brick_Block)
-		
-	if Input.is_action_just_pressed("ui_focus_next"):
-		if ChangeBLock:
-			Brick_Block = Vector2i(0, 0)
-		else:
-			Brick_Block = Vector2i(1, 1)
-		ChangeBLock = !ChangeBLock
+	#if Input.is_action_just_pressed("ui_create_object"):
+		#var mouse_position = get_global_mouse_position()
+		#var tile_spawn = TILEMAP.local_to_map(mouse_position)
+		#print(tile_spawn)
+		#TILEMAP.set_cell(tile_spawn, ground_level, Brick_Block)
+		#
+	#if Input.is_action_just_pressed("ui_focus_next"):
+		#if ChangeBLock:
+			#Brick_Block = Vector2i(0, 0)
+		#else:
+			#Brick_Block = Vector2i(1, 1)
+		#ChangeBLock = !ChangeBLock
 	if Input.is_action_just_pressed("ui_JSON_test"):
 		MapManager.save_map(MAP, TILEMAP)
 	if Input.is_action_just_pressed("ui_JSON_test_2"):
